@@ -17,6 +17,9 @@ services:
 
 
 
+#  bu postgres uchun
+
+
 # services:
 
 #   postgres-db:
