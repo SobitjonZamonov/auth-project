@@ -9,7 +9,52 @@ services:
       - "3000:3000"
     restart: always
     volumes:
-      - .:/app
+      - .:/app:cached
       - /app/node_modules
     environment:
       NODE_ENV: production
+
+
+
+
+# services:
+
+#   postgres-db:
+#     container_name: "cv_marker"
+#     image: postgres
+#     enviroment:
+#       POSTGRES_DB: postgres
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: sobitjon_2007$$$
+
+#     env_file:
+#     - .env
+#     volumes:
+#     - cv-volumes:/var/lib/postgressql/data
+#     ports:
+#     - "5454:5432"
+#     restart: unless-stoppes
+
+  
+#   backend-app:
+#     container_name: cv-marker
+#     build:
+#       context: .
+#     ports:
+#       - 3000:3000
+
+#     dependens_on:
+#       - postgres-db
+#     env_file:
+#       - .env
+#     volumes:
+#       - .:/user/src/app
+#       - /user/src/app/node_modules
+
+#     restart: unless-stopped
+
+#     command: npm run start:dev
+
+# volumes:
+#    cv_volumes:
+
